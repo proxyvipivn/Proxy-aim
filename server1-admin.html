@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRUNGSANG X CHEAT🚀 | ADMIN TẠO KEY</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;color:#fff}
+body{min-height:100vh;background:#000814;overflow-x:hidden;position:relative}
+body::before{content:"";position:fixed;inset:0;background:
+conic-gradient(from 0deg,#0099ff,#00d4ff,#0066cc,#003380,#0099ff);
+filter:blur(80px) brightness(.35);animation:xoay 12s linear infinite;z-index:0}
+@keyframes xoay{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+@keyframes sang{0%,100%{box-shadow:0 0 15px #00aaff,0 0 30px #00aaff88,inset 0 0 12px #00aaff55}
+50%{box-shadow:0 0 30px #66e0ff,0 0 60px #00ccff99,inset 0 0 20px #66e0ff66}}
+@keyframes chaymau{0%{border-color:#008cff}25%{border-color:#00e1ff}50%{border-color:#0055cc}75%{border-color:#00bfff}100%{border-color:#008cff}}
+.wrap{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:20px}
+h1{text-align:center;font-size:28px;padding:20px;margin-bottom:20px;
+background:linear-gradient(90deg,#00aaff,#88eeff,#0066dd,#00aaff);
+background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+animation:chuyennau 5s linear infinite;text-shadow:0 0 25px #00aaff88}
+@keyframes chuyennau{0%{background-position:0%}100%{background-position:300%}}
+.khung{background:#00000080;border:2px solid #00aaff;border-radius:14px;padding:20px;
+animation:sang 3s ease-in-out infinite,chaymau 6s linear infinite;backdrop-filter:blur(10px);margin-bottom:18px;
+transform-style:preserve-3d;transition:transform .4s}
+.khung:hover{transform:perspective(900px) rotateX(2deg) rotateY(-2deg)}
+input,select,button{width:100%;padding:12px 14px;margin:8px 0;border-radius:10px;
+background:#001024aa;border:1.5px solid #00aaff88;outline:none;font-size:15px}
+input:focus,select:focus{border-color:#66e0ff;box-shadow:0 0 18px #00ccff}
+button{cursor:pointer;background:linear-gradient(135deg,#0077dd,#00ccee);font-weight:700;letter-spacing:.5px}
+button:hover{filter:brightness(1.2);box-shadow:0 0 22px #00ddffcc}
+button.danger{background:linear-gradient(135deg,#cc1122,#ff4455)}
+button.warning{background:linear-gradient(135deg,#cc8800,#ffbb22)}
+button.success{background:linear-gradient(135deg,#009944,#22dd77)}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{padding:10px;border:1px solid #00aaff55;text-align:center;font-size:13px}
+th{background:#003366aa}
+tr:hover{background:#00224488}
+.hide{display:none !important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>⚡ TRUNGSANG X CHEAT🚀 | ADMIN QUẢN LÝ KEY ⚡</h1>
+
+<!-- ĐĂNG NHẬP -->
+<div id="dangnhap" class="khung">
+<h2 style="text-align:center;margin-bottom:10px">🔐 NHẬP MẬT KHẨU ADMIN</h2>
+<input type="password" id="mk" placeholder="Nhập mật khẩu...">
+<button onclick="dangnhap()">ĐĂNG NHẬP</button>
+<p id="loimk" style="color:#ff6666;text-align:center;margin-top:6px;display:none">❌ Mật khẩu sai!</p>
+</div>
+
+<!-- NỘI DUNG ADMIN -->
+<div id="admin" class="hide">
+<div class="khung">
+<h3>➕ TẠO KEY MỚI</h3>
+<select id="thoihan">
+<option value="86400">⏳ 1 NGÀY</option>
+<option value="604800">📅 1 TUẦN</option>
+<option value="2592000">🗓️ 1 THÁNG (30 NGÀY)</option>
+</select>
+<button onclick="taokey()">✅ TẠO KEY NGẪU NHIÊN</button>
+<p id="keyvua tao" style="text-align:center;margin-top:10px;font-size:18px;word-break:break-all;color:#7fffd4"></p>
+</div>
+
+<div class="khung">
+<h3>📋 DANH SÁCH KEY & LỊCH SỬ</h3>
+<button onclick="xuatdulieu()" style="width:auto;padding:8px 14px;margin-right:6px">💾 LƯU FILE SAO LƯU</button>
+<label><input type="file" accept=".json" id="nhapfile" onchange="nhapdulieu(event)" style="display:none">
+<button onclick="document.getElementById('nhapfile').click()" style="width:auto;padding:8px 14px">📂 PHỤC HỒI</button></label>
+<div id="danhsach"></div>
+</div>
+</div>
+</div>
+
+<script>
+const MATKHAU="PROXYVIPSIEUNGONBORE";
+const KHOADULIEU="TSXCHEAT_ADMIN_KEYS";
+var keys=JSON.parse(localStorage.getItem(KHOADULIEU)||"[]");
+
+function dangnhap(){
+  if(document.getElementById("mk").value===MATKHAU){
+    document.getElementById("dangnhap").classList.add("hide");
+    document.getElementById("admin").classList.remove("hide");
+    hienthi();
+  }else document.getElementById("loimk").style.display="block";
+}
+function taokey(){
+  const do dai=16,kit u="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+  let k="";for(let i=0;i<dodai;i++)k+=kitu[Math.floor(Math.random()*kitu.length)];
+  keys.push({
+    key:k,
+    thoihan:parseInt(document.getElementById("thoihan").value),
+    thoigian tao:Date.now(),
+    thoigian kichhoat:null,
+    uid:null,
+    trangthai:"chuakichhoat", // chuakichhoat | hoatdong | khoa | hethan
+    lichsu:[{hanhdong:"TẠO KEY",thoigian:new Date().toLocaleString("vi-VN")}]
+  });
+  luu();
+  document.getElementById("keyvuatao").innerHTML=`🔑 KEY MỚI: <b>${k}</b>`;
+  hienthi();
+}
+function khoa(key){
+  const k=keys.find(x=>x.key===key);
+  if(!k)return;
+  k.trangthai=k.trangthai==="khoa"?"hoatdong":"khoa";
+  k.lichsu.push({hanhdong:k.trangthai==="khoa"?"KHÓA TẠM":"MỞ KHÓA",thoigian:new Date().toLocaleString("vi-VN")});
+  luu();hienthi();
+}
+function xoa(key){
+  if(!confirm("XÓA VĨNH VIỄN KEY NÀY?"))return;
+  keys=keys.filter(x=>x.key!==key);luu();hienthi();
+}
+function luu(){localStorage.setItem(KHOADULIEU,JSON.stringify(keys));}
+function hienthi(){
+  let html=`<table><tr><th>KEY</th><th>LOẠI</th><th>LÚC TẠO</th><th>LÚC KÍCH HOẠT</th><th>UID</th><th>TRẠNG THÁI</th><th>HÀNH ĐỘNG</th></tr>`;
+  [...keys].reverse().forEach(k=>{
+    const loai=k.thoihan===86400?"1 NGÀY":k.thoihan===604800?"1 TUẦN":"1 THÁNG";
+    html+=`<tr><td style="font-family:monospace">${k.key}</td><td>${loai}</td>
+    <td>${new Date(k.thoigiantao).toLocaleString("vi-VN")}</td>
+    <td>${k.thoigiankichhoat?new Date(k.thoigiankichhoat).toLocaleString("vi-VN"):"—"}</td>
+    <td>${k.uid||"—"}</td>
+    <td>${k.trangthai==="chuakichhoat"?"🟡 CHƯA DÙNG":k.trangthai==="hoatdong"?"🟢 HOẠT ĐỘNG":k.trangthai==="khoa"?"🔴 KHÓA":"⚫ HẾT HẠN"}</td>
+    <td>
+    <button class="warning" onclick="khoa('${k.key}')" style="width:auto;padding:5px 8px">${k.trangthai==="khoa"?"MỞ":"KHÓA"}</button>
+    <button class="danger" onclick="xoa('${k.key}')" style="width:auto;padding:5px 8px">XÓA</button>
+    </td></tr>`;
+  });
+  html+="</table>";
+  document.getElementById("danhsach").innerHTML=keys.length?html:`<p style="text-align:center;padding:20px">Chưa có key nào</p>`;
+}
+function xuatdulieu(){
+  const blob=new Blob([JSON.stringify(keys,null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download=`BACKUP_KEY_TSXCHEAT_${Date.now()}.json`;a.click();
+}
+function nhapdulieu(e){
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=ev=>{try{keys=JSON.parse(ev.target.result);luu();hienthi();alert("✅ Phục hồi thành công")}catch{alert("❌ File lỗi")}};
+  r.readAsText(f);
+}
+</script>
+</body>
+</html>
