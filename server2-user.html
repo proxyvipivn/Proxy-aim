@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proxy vip v2⚙️ | NHẬP KEY</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;color:#fff}
+body{min-height:100vh;background:#0a0000;overflow-x:hidden;position:relative}
+body::before{content:"";position:fixed;inset:0;background:
+conic-gradient(from 0deg,#ff0033,#ff4466,#cc0022,#770011,#ff0033);
+filter:blur(80px) brightness(.35);animation:xoay 12s linear infinite;z-index:0}
+@keyframes xoay{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+@keyframes sang{0%,100%{box-shadow:0 0 18px #ff1144,0 0 36px #ff003388,inset 0 0 14px #ff003355}
+50%{box-shadow:0 0 36px #ff6688,0 0 72px #ff2244aa,inset 0 0 24px #ff446677}}
+@keyframes chaymau{0%{border-color:#ff0022}25%{border-color:#ff5577}50%{border-color:#cc0011}75%{border-color:#ff3355}100%{border-color:#ff0022}}
+.wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:20px}
+h1{text-align:center;font-size:28px;padding:20px;margin-bottom:20px;
+background:linear-gradient(90deg,#ff1133,#ffaaaa,#cc0011,#ff1133);
+background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+animation:chuyennau 5s linear infinite;text-shadow:0 0 25px #ff003388}
+@keyframes chuyennau{0%{background-position:0%}100%{background-position:300%}}
+.khung{background:#0a000099;border:2.5px solid #ff1133;border-radius:14px;padding:22px;
+animation:sang 2.8s ease-in-out infinite,chaymau 5s linear infinite;backdrop-filter:blur(10px);margin-bottom:18px;
+transform-style:preserve-3d;transition:transform .4s}
+.khung:hover{transform:perspective(900px) rotateX(-2deg) rotateY(2deg)}
+input,button{width:100%;padding:13px 14px;margin:8px 0;border-radius:10px;
+background:#140005aa;border:1.5px solid #ff224488;outline:none;font-size:15px}
+input:focus{border-color:#ff8899;box-shadow:0 0 20px #ff0033cc}
+button{cursor:pointer;background:linear-gradient(135deg,#cc0011,#ff4466);font-weight:700;letter-spacing:.5px}
+button:hover{filter:brightness(1.25);box-shadow:0 0 24px #ff2244dd}
+#demnguoc{font-size:46px;text-align:center;font-weight:900;color:#ff3355;text-shadow:0 0 20px #ff0022;margin:10px 0}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{padding:10px;border:1px solid #ff224455;text-align:center;font-size:13px}
+th{background:#330008aa}
+tr:hover{background:#220005aa}
+.hide{display:none !important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>⚙️ Proxy vip v2⚙️ | KÍCH HOẠT KEY</h1>
+
+<div id="nhapkey" class="khung">
+<h3 style="text-align:center">🔑 NHẬP KEY ĐỂ KÍCH HOẠT</h3>
+<input type="text" id="key" placeholder="Dán key của bạn vào đây..." maxlength="20">
+<button onclick="kiemtrakey()">⚡ KIỂM TRA & KÍCH HOẠT</button>
+<p id="thongbao" style="text-align:center;margin-top:8px"></p>
+</div>
+
+<div id="chodoi" class="khung hide">
+<h3 style="text-align:center">✅ KEY HỢP LỆ | ĐANG XỬ LÝ</h3>
+<p style="text-align:center">Tự động chuyển sau:</p>
+<div id="demnguoc">00</div>
+<p style="text-align:center;font-size:13px;color:#ffaaaa">Vui lòng không tắt trang...</p>
+</div>
+
+<div class="khung">
+<h3>📜 LỊCH SỬ SỬ DỤNG KEY</h3>
+<div id="lichsu"></div>
+</div>
+</div>
+
+<script>
+// ⚠️ Dữ liệu key được đồng bộ từ SERVER 1 qua trình duyệt cùng tên miền / nhập thủ công
+const KHOA_ADMIN="TSXCHEAT_ADMIN_KEYS";
+const KHOA_USER="TSXCHEAT_USER_HISTORY";
+var keys=JSON.parse(localStorage.getItem(KHOA_ADMIN)||"[]");
+var lichsu=JSON.parse(localStorage.getItem(KHOA_USER)||"[]");
+
+function kiemtrakey(){
+  const key=document.getElementById("key").value.trim().toUpperCase();
+  const tb=document.getElementById("thongbao");
+  if(!key){tb.innerHTML="⚠️ Vui lòng nhập key";tb.style.color="#ffcc00";return}
+  const k=keys.find(x=>x.key===key);
+  if(!k){tb.innerHTML="❌ KEY KHÔNG HỢP LỆ — Chỉ key do Admin tạo mới dùng được!";tb.style.color="#ff4466";return}
+  if(k.trangthai==="khoa"){tb.innerHTML="🔴 KEY NÀY ĐÃ BỊ KHÓA TẠM BỞI ADMIN";tb.style.color="#ff4466";return}
+  if(k.trangthai==="hethan"){tb.innerHTML="⚫ KEY NÀY ĐÃ HẾT HẠN SỬ DỤNG";tb.style.color="#ff4466";return}
+
+  // KÍCH HOẠT NẾU LÀ LẦN ĐẦU
+  if(k.trangthai==="chuakichhoat"){
+    k.trangthai="hoatdong";
+    k.thoigiankichhoat=Date.now();
+    k.lichsu.push({hanhdong:"NGƯỜI DÙNG KÍCH HOẠT",thoigian:new Date().toLocaleString("vi-VN")});
+    localStorage.setItem(KHOA_ADMIN,JSON.stringify(keys));
+  }
+
+  // LƯU LỊCH SỬ NGƯỜI DÙNG
+  const loai=k.thoihan===86400?"1 NGÀY":k.thoihan===604800?"1 TUẦN":"1 THÁNG";
+  lichsu.unshift({
+    key:k.key,loai:loai,
+    thoigian:new Date().toLocaleString("vi-VN"),
+    thoigiankichhoat:k.thoigiankichhoat
+  });
+  localStorage.setItem(KHOA_USER,JSON.stringify(lichsu));
+
+  // CHẠY ĐỢI 10–30 GIÂY RỒI CHUYỂN LINK
+  document.getElementById("nhapkey").classList.add("hide");
+  document.getElementById("chodoi").classList.remove("hide");
+  let giay=Math.floor(Math.random()*21)+10;
+  document.getElementById("demnguoc").innerText=giay;
+  const t=setInterval(()=>{
+    giay--;
+    document.getElementById("demnguoc").innerText=giay;
+    if(giay<=0){clearInterval(t);location.href="https://chunchuche.io.vn/v2/activate.php"}
+  },1000);
+  hienthilichsu();
+}
+
+function hienthilichsu(){
+  let html=`<table><tr><th>KEY</th><th>LOẠI</th><th>THỜI GIAN SỬ DỤNG</th></tr>`;
+  lichsu.forEach(x=>html+=`<tr><td style="font-family:monospace">${x.key}</td><td>${x.loai}</td><td>${x.thoigian}</td></tr>`);
+  html+="</table>";
+  document.getElementById("lichsu").innerHTML=lichsu.length?html:`<p style="text-align:center;padding:18px">Chưa có lịch sử</p>`;
+}
+hienthilichsu();
+</script>
+</body>
+</html>
